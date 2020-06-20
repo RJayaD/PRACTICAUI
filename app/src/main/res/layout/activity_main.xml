@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codinginflow.maskedittext.MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="18dp"
+        android:text="Práctica 1 Android"
+        android:textAlignment="center"
+        android:textColor="#18423D"
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="332dp"
+        android:text="Teléfono:"
+        android:textColor="#009688"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="162dp"
+        android:text="@string/txt_genero"
+        android:textColor="#009688"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radiogrup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masculino"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Femenino"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="247dp"
+        android:text="Fecha Nac:"
+        android:textColor="#009688"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="71dp"
+        android:text="Nombre:"
+        android:textColor="#009688"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/txtNameUser"
+        android:layout_width="193dp"
+        android:layout_height="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="65dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textStyle="italic" />
+
+    <com.santalu.maskedittext.MaskEditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="193dp"
+        android:layout_height="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="317dp"
+        android:layout_marginEnd="65dp"
+        android:hint="+593 (Ecuador)"
+        android:inputType="phone"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:met_mask="(+593) ### ### ###" />
+
+    <com.santalu.maskedittext.MaskEditText
+        android:id="@+id/txtFecha"
+        android:layout_width="193dp"
+        android:layout_height="46dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="237dp"
+        android:layout_marginEnd="65dp"
+        android:hint="DD - MM - YYYY"
+        android:inputType="date"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:met_mask="## - ## - ####" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="166dp"
+        android:layout_marginBottom="118dp"
+        android:onClick="btnEnviar"
+        android:text="Enviar" />
+
+</RelativeLayout>
